@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+        <link href="https://image.flaticon.com/icons/png/512/870/870910.png" rel="icon" type="image/gif">
     </head>
     <body>
         <div id="root">
@@ -33,7 +34,8 @@
                             <p class="movie-original-title">{{movie.original_title}}</p>
                             <p class="movie-original-language">{{movie.original_language}}</p>
                             <div class="movie-vote-stars">
-                                <i class="fas fa-star" v-for="star in changeStar(index)"></i>
+                                <i class="fas fa-star" v-for="star in changeStar(movie)"></i>
+                                <i class="far fa-star" v-for="star in 5 - changeStar(movie)"></i>
                             </div>
                         </div>
                     </div>

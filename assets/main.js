@@ -4,7 +4,6 @@ var app = new Vue(
     {
         el: '#root',
         data: {
-            movie_index: 0,
             imgPath: 'https://image.tmdb.org/t/p/w185',
             searchQuery: '',
             movies: [],
@@ -21,8 +20,8 @@ var app = new Vue(
                     this.movies = response.data.results;
                 });
             },
-            changeStar: function(index) {
-                let vote = Math.trunc(this.movies[this.movie_index].vote_average) / 2;
+            changeStar: function(movie) {
+                let vote = Math.floor(movie.vote_average / 2);
                 return vote;
             }
         }

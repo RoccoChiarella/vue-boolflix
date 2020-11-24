@@ -91,6 +91,10 @@ body{
 .movie-information-container{
     margin-left: 10px;
     align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .movie .movie-information-container .movie-title{
@@ -109,6 +113,12 @@ body{
     color: grey;
 }
 
-.movie .movie-avarage-vote{
+.movie .movie-vote-stars{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.movie-vote-stars i{
     color: gold;
 }
