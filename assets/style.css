@@ -4,3 +4,59 @@
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
 }
+
+body{
+    height: 100vh;
+    color: #000;
+}
+
+.movies-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+
+.movie{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 200px;
+    padding: 20px;
+    margin: 10px 20px;
+    background: rgb(60, 60, 60);
+    text-align: center;
+}
+
+.movie-img-container{
+    align-self: center;
+}
+
+.movie .movie-img-container .movie-img{
+
+}
+
+.movie-information-container{
+    margin-left: 10px; 
+    align-self: flex-start;
+}
+
+.movie .movie-information-container .movie-title{
+    margin: 20px 0;
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.movie .movie-information-container .movie-original-title{
+    color: grey;
+    font-size: 20px;
+}
+
+.movie .movie-information-container .movie-original-language{
+    color: grey;
+}
+
+.movie .movie-avarage-vote{
+    color: gold;
+}

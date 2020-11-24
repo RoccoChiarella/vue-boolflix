@@ -12,8 +12,25 @@
     </head>
     <body>
         <div id="root">
-            <input placeholder="Inserisci il nome del film" v-model="searchQuery">
-            <button type="button" @click="findMovie">Cerca il film</button>
+            <div class="container">
+                <div class="search-movie">
+                    <input placeholder="Inserisci il nome del film" v-model="searchQuery" class="search-movie-bar">
+                    <button type="button" @click="findMovie" class="search-movie-button">Cerca il film</button>
+                </div>
+                <div class="movies-container">
+                    <div class="movie" v-for="(movie, index) in movies">
+                        <div class="movie-img-container">
+                            <img :src="imgPath + movie.poster_path" class="movie-img">
+                        </div>
+                        <div class="movie-information-container">
+                            <h3 class="movie-title">{{movie.title}}</h3>
+                            <p class="movie-original-title">{{movie.original_title}}</p>
+                            <p class="movie-original-language">{{movie.original_language}}</p>
+                            <p class="movie-avarage-vote">{{movie.vote_average}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="assets/main.js" charset="utf-8"></script>
     </body>

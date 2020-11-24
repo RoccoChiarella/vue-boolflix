@@ -4,9 +4,9 @@ var app = new Vue(
     {
         el: '#root',
         data: {
-            searchQuery: 'avenger',
+            imgPath: 'https://image.tmdb.org/t/p/w185',
+            searchQuery: '',
             movies: [],
-
         },
         methods: {
             findMovie: function() {
