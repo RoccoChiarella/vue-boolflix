@@ -10,20 +10,17 @@ var app = new Vue(
         },
         methods: {
             findMovie: function() {
-
+                axios.get('https://api.themoviedb.org/3/search/movie', {
+                    params: {
+                        api_key: '44b4e7242873c3afbbeb52392a0755bd',
+                        query: this.searchQuery
+                    }
+                })
+                .then((response) => {
+                    console.log(response);
+                    this.movies = response.data.results;
+                });
             }
         },
-        mounted() {
-            axios.get('https://api.themoviedb.org/3/search/movie', {
-                params: {
-                    api_key: '44b4e7242873c3afbbeb52392a0755bd',
-                    query: this.searchQuery
-                }
-            })
-            .then((response) => {
-                console.log(response);
-                this.movies = response.data.results;
-            });
-        }
     }
 );

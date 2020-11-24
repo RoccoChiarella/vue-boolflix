@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Spotify</title>
+        <title>Netflix</title>
         <script src="https://kit.fontawesome.com/37e6ce0705.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/style.css">
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -12,7 +12,7 @@
     </head>
     <body>
         <div id="root">
-            <input v-model="searchQuery">
+            <input placeholder="Inserisci il nome del film" v-model="searchQuery">
             <button type="button" @click="findMovie">Cerca il film</button>
         </div>
         <script src="assets/main.js" charset="utf-8"></script>
