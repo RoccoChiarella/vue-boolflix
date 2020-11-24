@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+.text-center{
+    text-align: center;
+}
+
 body{
     height: 90vh;
     background: #141414;
@@ -89,24 +93,20 @@ body{
 }
 
 .movie-information-container{
-    margin-left: 10px;
-    align-self: flex-start;
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .movie .movie-information-container .movie-title{
-    margin: 20px 0;
     color: white;
-    font-size: 22px;
     text-transform: uppercase;
 }
 
 .movie .movie-information-container .movie-original-title{
     color: grey;
-    font-size: 20px;
 }
 
 .movie .movie-information-container .movie-original-language{
@@ -117,6 +117,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .movie-vote-stars i{
