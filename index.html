@@ -32,7 +32,9 @@
                             <h3 class="movie-title">{{movie.title}}</h3>
                             <p class="movie-original-title">{{movie.original_title}}</p>
                             <p class="movie-original-language">{{movie.original_language}}</p>
-                            <p class="movie-avarage-vote">{{movie.vote_average}}</p>
+                            <div class="movie-vote-stars">
+                                <i class="fas fa-star" v-for="star in changeStar(index)"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
