@@ -25,9 +25,8 @@ var app = new Vue(
                         }
                     });
                     axios.all([requestOne, requestTwo]).then((responses) => {
-                        let generalResponse = {...responses[0], ...responses[1]};
-                        console.log(generalResponse);
-                        this.movies = generalResponse.data.results;
+                        let generalResponse = responses[0].data.results.concat(responses[1].data.results);
+                        this.movies = generalResponse;
                     });
                 }
             },

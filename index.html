@@ -31,8 +31,8 @@
                         </div>
                         <div class="movie-information-container">
                             <div class="movie-information">
-                                <h3 class="movie-title">{{movie.title}}</h3>
-                                <p class="movie-original-title">{{movie.original_title}}</p>
+                                <h3 class="movie-title">{{movie.title}}{{movie.name}}</h3>
+                                <p class="movie-original-title">{{movie.original_title}}{{movie.original_name}}</p>
                                 <span class="movie-original-language"><img :src="'img/'+ movie.original_language +'.png'"></span>
                                 <div class="movie-vote-stars">
                                     <i class="fas fa-star" v-for="star in changeStar(movie)"></i>
