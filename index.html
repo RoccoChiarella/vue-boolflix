@@ -17,7 +17,7 @@
                 <div class="search-movie">
                     <img src="https://image.flaticon.com/icons/png/512/870/870910.png" alt="">
                     <div class="search-movie-container">
-                        <input placeholder="Inserisci il nome del film" v-model="searchQuery" class="search-movie-bar">
+                        <input placeholder="Inserisci il nome del film" v-model="searchQuery" class="search-movie-bar" @keyup.enter="findMovie">
                         <button type="button" @click="findMovie" class="search-movie-button">Cerca il film</button>
                     </div>
                 </div>
@@ -30,12 +30,14 @@
                             <strong>Immagine non presente</strong>
                         </div>
                         <div class="movie-information-container">
-                            <h3 class="movie-title">{{movie.title}}</h3>
-                            <p class="movie-original-title">{{movie.original_title}}</p>
-                            <p class="movie-original-language">{{movie.original_language}}</p>
-                            <div class="movie-vote-stars">
-                                <i class="fas fa-star" v-for="star in changeStar(movie)"></i>
-                                <i class="far fa-star" v-for="star in 5 - changeStar(movie)"></i>
+                            <div class="movie-information">
+                                <h3 class="movie-title">{{movie.title}}</h3>
+                                <p class="movie-original-title">{{movie.original_title}}</p>
+                                <span class="movie-original-language"><img :src="'img/'+ movie.original_language +'.png'"></span>
+                                <div class="movie-vote-stars">
+                                    <i class="fas fa-star" v-for="star in changeStar(movie)"></i>
+                                    <i class="far fa-star" v-for="star in 5 - changeStar(movie)"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
