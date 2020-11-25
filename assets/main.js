@@ -12,14 +12,21 @@ var app = new Vue(
             findMovie: function() {
                 if (this.searchQuery.trim()) {
                     this.movies = [];
-                    axios.get('https://api.themoviedb.org/3/search/movie', {
+                    let requestOne = axios.get('https://api.themoviedb.org/3/search/movie', {
                         params: {
                             api_key: '44b4e7242873c3afbbeb52392a0755bd',
                             query: this.searchQuery
                         }
-                    })
-                    .then((response) => {
-                        this.movies = response.data.results;
+                    });
+                    let requestTwo = axios.get('https://api.themoviedb.org/3/search/tv', {
+                        params: {
+                            api_key: '44b4e7242873c3afbbeb52392a0755bd',
+                            query: this.searchQuery
+                        }
+                    });
+                    axios.all([requestOne, requestTwo]).then((responses) => {
+                        let generalResponse = [...responses[0], ...responses[1]];
+                        this.movies.push = generalResponse.data.results;
                     });
                 }
             },
