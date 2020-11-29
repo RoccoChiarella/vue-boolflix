@@ -7,6 +7,7 @@ var app = new Vue(
             imgPath: 'https://image.tmdb.org/t/p/w185',
             searchQuery: '',
             movies: [],
+            flagsAvailable: ['de','en','es','fr','it','ja','sv','zh']
         },
         methods: {
             findMovie: function() {
